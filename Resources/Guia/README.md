@@ -1,39 +1,15 @@
-Pokép🐵ly
+#Pokép🐵ly
 
 
-Índice
+#Índice
 
-
+
 Guía para PokePoly	1
 Inicio del juego	1
 Tipos de casillas	1
 Legendarios	1
 Mecánica general	2
-Equipo de desarrollo	2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Equipo de desarrollo	2
 
 
 #Guía para PokePoly
