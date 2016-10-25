@@ -1,2 +1,2 @@
-# PokePoly
+# PokéPoly
 PokéPoly for JavaFX
