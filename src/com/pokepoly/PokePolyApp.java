@@ -7,7 +7,9 @@ public class PokePolyApp extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-
+		
+		System.out.println("gabri es manca");
+		
 	}
 	public static void main(String[] args) {
 		launch(args);
