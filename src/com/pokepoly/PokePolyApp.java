@@ -11,7 +11,7 @@ public class PokePolyApp extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		primaryStage.setScene(new Scene(new HBox(5, new Button("PENE")), 620, 620));
+		primaryStage.setScene(new Scene(new HBox(5, new Button("")), 620, 620));
 		primaryStage.setTitle("PokéPoly");
 		primaryStage.show();
 	}
