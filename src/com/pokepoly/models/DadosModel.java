@@ -1,7 +1,6 @@
 package com.pokepoly.models;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class DadosModel {
 
