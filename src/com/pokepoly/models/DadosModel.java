@@ -1,6 +1,7 @@
 package com.pokepoly.models;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class DadosModel {
 
@@ -17,15 +18,16 @@ public class DadosModel {
 		for (int i = 0; i < numDados; i++) {
 			dados.add((int) Math.floor(Math.random() * caras) + 1);
 		}
-		
+
 	}
 
 	public int getResultadoTotal() {
 
 		int tirada = 0;
 
-		for (int i = 0; i < dados.size(); i++)
-			tirada += dados.get(i);
+		for (Integer result : dados) {
+			tirada += result;
+		}
 
 		return tirada;
 	}
