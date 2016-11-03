@@ -11,7 +11,7 @@ public class DadosController {
 	public DadosController() {
 		dadoButton = new DadoButton();
 
-		dadoButton.setOnAction((e)-> onDadosButtonAction());
+		dadoButton.setOnAction((e) -> onDadosButtonAction());
 	}
 
 	private void onDadosButtonAction() {
@@ -30,7 +30,5 @@ public class DadosController {
 	public DadoButton getDadoButton() {
 		return dadoButton;
 	}
-	
-	
-	
+
 }
