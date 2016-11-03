@@ -22,8 +22,8 @@ public class PokePolyApp extends Application {
 		
 		for (int i = 0; i < pokemonController.getPokemonList().size(); i++) {
 			
-			System.out.println(pokemonController.getPokemonList().get(i).getNombrePokemon());
-			System.out.println(pokemonController.getPokemonList().get(i).getTiposPokemon());
+			System.out.println(pokemonController.getPokemonList().get(i).toString());
+			
 		}
 		
 		

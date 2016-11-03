@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.pokepoly.enums.Tipos;
 import com.pokepoly.model.PokemonModel;
 
 public class PokemonController {
@@ -30,20 +31,9 @@ public class PokemonController {
 		JSONObject jsonObject = new JSONObject(accederFicheroJson());
 		pokemonList = new ArrayList<>();
 		for (int i = 1; i <= jsonObject.length(); i++) {
-			String tipos ="[";
-			String evolucion ="";
 			String nombrePokemon = jsonObject.getJSONObject(i+"").getString("Nombre");		
 			JSONArray tiposPokemon = jsonObject.getJSONObject(i+"").getJSONArray("Tipos");		
-			for (int j = 0; j < tiposPokemon.length(); j++) {
-				
-				 tipos += " "+tiposPokemon.get(j).toString()+" ";
-			}
-			tipos += "]";
 			JSONArray evolucionPokemon = jsonObject.getJSONObject(i+"").getJSONArray("Evolucion");	
-			
-			for (int j = 0; j < evolucionPokemon.length(); j++) {
-				 evolucion += evolucionPokemon.get(j).toString();
-			}	
 			int fasePokemon = jsonObject.getJSONObject(i+"").getInt("Fase");		
 			ArrayList listaEvolucion = toArrayList(evolucionPokemon); 
 			ArrayList listaTipos = toArrayList(tiposPokemon);
