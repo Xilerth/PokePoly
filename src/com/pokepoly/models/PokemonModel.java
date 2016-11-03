@@ -1,12 +1,5 @@
 package com.pokepoly.models;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +18,6 @@ public class PokemonModel {
 	IntegerProperty idPokemon, fasePokemon;
 	StringProperty nombrePokemon;
 	ListProperty<Integer> tiposPokemon, evolucionPokemon;
-	
 
 	public PokemonModel(int idPokemon, int fasePokemon, String nombrePokemon, ArrayList<Integer> tiposPokemon,
 			ArrayList<Integer> evolucionPokemon) {
@@ -102,38 +94,77 @@ public class PokemonModel {
 	public String toString() {
 		String tipos = "";
 		for (int j = 0; j < tiposPokemon.size(); j++) {
-			
-			switch(tiposPokemon.get(j).toString()){
-			case "0": tipos +=""; break;
-			case "1": tipos +=" "+Tipos.ACERO; break;
-			case "2": tipos +=" "+Tipos.AGUA; break;
-			case "3": tipos +=" "+Tipos.BICHO; break;
-			case "4": tipos +=" "+Tipos.DRAGÓN; break;
-			case "5": tipos +=" "+Tipos.ELÉCTRICO; break;
-			case "6": tipos +=" "+Tipos.FANTASMA; break;
-			case "7": tipos +=" "+Tipos.FUEGO; break;
-			case "8": tipos +=" "+Tipos.HADA; break;
-			case "9": tipos +=" "+Tipos.HIELO; break;
-			case "10": tipos +=" "+Tipos.LUCHA; break;
-			case "11": tipos +=" "+Tipos.NORMAL; break;
-			case "12": tipos +=" "+Tipos.PLANTA; break;
-			case "13": tipos +=" "+Tipos.PSÍQUICO; break;
-			case "14": tipos +=" "+Tipos.ROCA; break;
-			case "15": tipos +=" "+Tipos.SINIESTRO; break;
-			case "16": tipos +=" "+Tipos.TIERRA; break;
-			case "17": tipos +=" "+Tipos.VENENO; break;
-			case "18": tipos +=" "+Tipos.VOLADOR; break;
-			
+
+			switch (tiposPokemon.get(j).toString()) {
+			case "0":
+				tipos += "";
+				break;
+			case "1":
+				tipos += " " + Tipos.ACERO;
+				break;
+			case "2":
+				tipos += " " + Tipos.AGUA;
+				break;
+			case "3":
+				tipos += " " + Tipos.BICHO;
+				break;
+			case "4":
+				tipos += " " + Tipos.DRAGÓN;
+				break;
+			case "5":
+				tipos += " " + Tipos.ELÉCTRICO;
+				break;
+			case "6":
+				tipos += " " + Tipos.FANTASMA;
+				break;
+			case "7":
+				tipos += " " + Tipos.FUEGO;
+				break;
+			case "8":
+				tipos += " " + Tipos.HADA;
+				break;
+			case "9":
+				tipos += " " + Tipos.HIELO;
+				break;
+			case "10":
+				tipos += " " + Tipos.LUCHA;
+				break;
+			case "11":
+				tipos += " " + Tipos.NORMAL;
+				break;
+			case "12":
+				tipos += " " + Tipos.PLANTA;
+				break;
+			case "13":
+				tipos += " " + Tipos.PSÍQUICO;
+				break;
+			case "14":
+				tipos += " " + Tipos.ROCA;
+				break;
+			case "15":
+				tipos += " " + Tipos.SINIESTRO;
+				break;
+			case "16":
+				tipos += " " + Tipos.TIERRA;
+				break;
+			case "17":
+				tipos += " " + Tipos.VENENO;
+				break;
+			case "18":
+				tipos += " " + Tipos.VOLADOR;
+				break;
+
 			}
 			try {
-				if(!tiposPokemon.get(j+1).equals(0))
-				tipos +=", ";
+				if (!tiposPokemon.get(j + 1).equals(0))
+					tipos += ", ";
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-			 
+
 		}
-		String Pokemon = getIdPokemon()+", "+getNombrePokemon()+", "+tipos+", "+getFasePokemon()+", "+getEvolucionPokemon();
-	return Pokemon;
+		String Pokemon = getIdPokemon() + ", " + getNombrePokemon() + ", " + tipos + ", " + getFasePokemon() + ", "
+				+ getEvolucionPokemon();
+		return Pokemon;
 	}
 }
