@@ -10,9 +10,9 @@ public class DadosComponent extends BorderPane {
 
 	private Label label = new Label();
 	
-	public DadosComponent() {
+	public DadosComponent(String data) {
 		VBox dado = new VBox();
-		label = new Label("3");
+		label = new Label(data);
 		dado.setStyle("-fx-font: 40 arial;");
 		dado.getChildren().addAll(label);
 		dado.setAlignment(Pos.CENTER);

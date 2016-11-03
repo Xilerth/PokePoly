@@ -7,14 +7,7 @@ public class DadosModel {
 	private ArrayList<Integer> dados;
 	private int caras;
 
-	public DadosModel() {
-		dados = new ArrayList<>();
-	}
 
-	public DadosModel(int caras) {
-		dados = new ArrayList<>();
-		this.caras = caras;
-	}
 
 	public void lanzarDados(int numDados) {
 		dados.clear();
@@ -33,7 +26,20 @@ public class DadosModel {
 		return tirada;
 	}
 
+	
 	public ArrayList<Integer> getDados() {
 		return dados;
+	}
+	
+	public int getCaras() {
+		return caras;
+	}
+
+	public void setCaras(int caras) {
+		this.caras = caras;
+	}
+
+	public DadosModel() {
+		dados = new ArrayList<>();
 	}
 }

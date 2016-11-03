@@ -10,7 +10,6 @@ public class DadosMain {
 		
 //		dadosController.getDados() = new DadosModel(6);
 
-		dadosController.setCaras(6);
 		dadosController.getDados().lanzarDados(3);
 		System.out.println(dadosController.getDados().getResultadoTotal());
 		System.out.println(dadosController.getDados().getDados());
