@@ -1,6 +1,7 @@
 package com.pokepoly.controllers;
 
 import java.util.ArrayList;
+import java.util.concurrent.Semaphore;
 
 import com.pokepoly.componets.DadoButton;
 import com.pokepoly.componets.DadosComponent;
@@ -15,14 +16,17 @@ public class DadosController {
 
 	DadosModel dados;
 	DadoButton dadoButton;
-
+	Boolean state;
+	
 	public DadosController() {
 		dadoButton = new DadoButton();
-
+		state = true;
 		dadoButton.setOnAction((e) -> onDadosButtonAction());
 	}
 
 	private void onDadosButtonAction() {
+		if(state){
+			state=false;
 		dados = new DadosModel();
 		dados.setCaras(6);
 		dados.lanzarDados(2);
@@ -37,18 +41,20 @@ public class DadosController {
 			stage.get(i).initStyle(StageStyle.UNDECORATED);
 			stage.get(i).show();
 		}
-
+		
 		Task<Void> sleeper = new Task<Void>() {
 	        @Override
 	        protected Void call() throws Exception {
 	            try {
 	                Thread.sleep(1000);
+	                
 	            } catch (InterruptedException e) {
-	            }
+	            }finally {
+					state=true;
+				}
 	            return null;
 	        }
 	    };
-	   
 		sleeper.setOnSucceeded((e)-> {
 			for (int i = 0; i < result.size(); i++) {
 				
@@ -61,6 +67,10 @@ public class DadosController {
 
 		    new Thread(sleeper).start();
 		    
+		}else{
+		
+		}
+		
 	}
 	
 
