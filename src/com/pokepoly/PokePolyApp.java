@@ -1,6 +1,6 @@
 package com.pokepoly;
 
-import com.pokepoly.controllers.PokemonController;
+import com.pokepoly.models.PokedexModel;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -10,17 +10,17 @@ import javafx.stage.Stage;
 
 public class PokePolyApp extends Application {
 
-	PokemonController pokemonController;
+	PokedexModel pokedexController;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		pokemonController = new PokemonController();
+		pokedexController = new PokedexModel();
 		primaryStage.setScene(new Scene(new HBox(5, new Button("Pokepoly")), 620, 620));
 
-		for (int i = 0; i < pokemonController.getPokemonList().size(); i++) {
+		for (int i = 0; i < pokedexController.getPokemonList().size(); i++) {
 
-			System.out.println(pokemonController.getPokemonList().get(i).toString());
+			System.out.println(pokedexController.getPokemonList().get(i).toString());
 
 		}
 

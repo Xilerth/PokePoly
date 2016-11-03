@@ -15,15 +15,18 @@ import javafx.collections.FXCollections;
 
 public class PokemonModel {
 
-	IntegerProperty idPokemon, fasePokemon;
+	IntegerProperty idPokemon, fasePokemon,vidaPokemon,nivelPokemon;
 	StringProperty nombrePokemon;
 	ListProperty<Integer> tiposPokemon, evolucionPokemon;
+	
 
 	public PokemonModel(int idPokemon, int fasePokemon, String nombrePokemon, ArrayList<Integer> tiposPokemon,
 			ArrayList<Integer> evolucionPokemon) {
 		this.idPokemon = new SimpleIntegerProperty(this, "idPokemon", idPokemon);
 		this.fasePokemon = new SimpleIntegerProperty(this, "fasePokemon", fasePokemon);
 		this.nombrePokemon = new SimpleStringProperty(this, "nombrePokemon", nombrePokemon);
+		this.vidaPokemon= new SimpleIntegerProperty(this, "vidaPokemon",0 );
+		this.nivelPokemon = new SimpleIntegerProperty(this, "nivelPokemon", 1);
 		this.tiposPokemon = new SimpleListProperty<Integer>();
 		this.tiposPokemon.set(FXCollections.observableArrayList(tiposPokemon));
 		this.evolucionPokemon = new SimpleListProperty<Integer>();

@@ -1,4 +1,4 @@
-package com.pokepoly.controllers;
+package com.pokepoly.models;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,23 +10,22 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import com.pokepoly.models.PokemonModel;
 
-public class PokemonController {
+public class PokedexModel {
 
-	private ArrayList <PokemonModel> pokemonList;
+	private ArrayList <PokemonModel> pokedex;
 	
 	public ArrayList<PokemonModel> getPokemonList() {
-		return pokemonList;
+		return pokedex;
 	}
 
 	public void setPokemonList(ArrayList<PokemonModel> pokemonList) {
-		this.pokemonList = pokemonList;
+		this.pokedex = pokemonList;
 	}
 
-	public PokemonController() {
+	public PokedexModel() {
 		JSONObject jsonObject = new JSONObject(accederFicheroJson());
-		pokemonList = new ArrayList<>();
+		pokedex = new ArrayList<>();
 		for (int i = 1; i <= jsonObject.length(); i++) {
 			String nombrePokemon = jsonObject.getJSONObject(i+"").getString("Nombre");		
 			JSONArray tiposPokemon = jsonObject.getJSONObject(i+"").getJSONArray("Tipos");		
@@ -35,7 +34,7 @@ public class PokemonController {
 			ArrayList<Integer> listaEvolucion = toArrayList(evolucionPokemon); 
 			ArrayList<Integer> listaTipos = toArrayList(tiposPokemon);
 			
-			pokemonList.add(new PokemonModel(i, fasePokemon, nombrePokemon, listaTipos, listaEvolucion));
+			pokedex.add(new PokemonModel(i, fasePokemon, nombrePokemon, listaTipos, listaEvolucion));
 		}
 	
 	}
