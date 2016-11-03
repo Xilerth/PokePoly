@@ -1,7 +1,7 @@
 package com.pokepoly;
 
 import com.pokepoly.controllers.PokemonController;
-import com.pokepoly.model.PokemonModel;
+import com.pokepoly.models.PokemonModel;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

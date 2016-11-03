@@ -1,4 +1,4 @@
-package com.pokepoly.model;
+package com.pokepoly.models;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

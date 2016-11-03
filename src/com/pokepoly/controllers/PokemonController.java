@@ -13,7 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.pokepoly.enums.Tipos;
-import com.pokepoly.model.PokemonModel;
+import com.pokepoly.models.PokemonModel;
 
 public class PokemonController {
 
