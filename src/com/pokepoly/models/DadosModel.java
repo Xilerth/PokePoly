@@ -7,7 +7,11 @@ public class DadosModel {
 	private ArrayList<Integer> dados;
 	private int caras;
 
-	DadosModel(int caras) {
+	public DadosModel() {
+		dados = new ArrayList<>();
+	}
+
+	public DadosModel(int caras) {
 		dados = new ArrayList<>();
 		this.caras = caras;
 	}
@@ -17,17 +21,15 @@ public class DadosModel {
 		for (int i = 0; i < numDados; i++) {
 			dados.add((int) Math.floor(Math.random() * caras) + 1);
 		}
-
+		System.out.println(getResultadoTotal());
+		System.out.println(getDados());
 	}
 
 	public int getResultadoTotal() {
-
 		int tirada = 0;
-
 		for (Integer result : dados) {
 			tirada += result;
 		}
-
 		return tirada;
 	}
 
