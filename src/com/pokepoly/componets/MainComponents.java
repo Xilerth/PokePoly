@@ -35,7 +35,7 @@ public class MainComponents extends Application {
 			jugadoresStages.get(i).setTitle("Jugador numero " + (i + 1));
 			jugadoresStages.get(i).setX(300 * (i + 2));
 			jugadoresStages.get(i).setY(500);
-			jugadoresStages.get(i).initStyle(StageStyle.UNIFIED);
+			jugadoresStages.get(i).initStyle(StageStyle.UTILITY);
 			jugadoresStages.get(i).show();
 
 		}

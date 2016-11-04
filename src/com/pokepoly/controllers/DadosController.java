@@ -75,7 +75,7 @@ public class DadosController {
 			} else {
 			}
 		}else {
-			System.out.println("No es tu turno jugador "+jugador+" Es el turno del jugador "+(turno.n+1));
+			System.out.println("No es tu turno jugador "+(jugador+1)+" Es el turno del jugador "+(turno.n+1));
 		}
 	}
 
