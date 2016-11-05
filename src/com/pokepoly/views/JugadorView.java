@@ -17,7 +17,7 @@ public class JugadorView extends GridPane {
 	Label nombreLabel, dineroLabel, gimnasiosLabel, pokedexLabel;
 	// Label
 
-	JugadorView() {
+	public JugadorView() {
 
 		dadoButton = new DadoButton();
 

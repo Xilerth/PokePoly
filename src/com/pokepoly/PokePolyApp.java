@@ -1,6 +1,7 @@
 package com.pokepoly;
 
 import com.pokepoly.models.PokedexModel;
+import com.pokepoly.views.JugadorView;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -16,7 +17,9 @@ public class PokePolyApp extends Application {
 	public void start(Stage primaryStage) throws Exception {
 
 		pokedexController = new PokedexModel();
-		primaryStage.setScene(new Scene(new HBox(5, new Button("Pokepoly")), 620, 620));
+		
+		JugadorView jView = new JugadorView();
+		primaryStage.setScene(new Scene(jView, 620, 620));
 
 		for (int i = 0; i < pokedexController.getPokemonList().size(); i++) {
 
