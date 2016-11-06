@@ -33,6 +33,9 @@ public class PokemonModel {
 		this.evolucionPokemon.set(FXCollections.observableArrayList(evolucionPokemon));
 	}
 
+	public PokemonModel() {
+	}
+
 	public IntegerProperty idPokemonProperty() {
 		return this.idPokemon;
 	}

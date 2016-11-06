@@ -11,10 +11,13 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import sun.net.idn.Punycode;
+
 public class PokedexModel {
 
-	private ArrayList <PokemonModel> pokedex;
-	
+	private ArrayList<PokemonModel> pokedex;
+	private int puntero;
+
 	public ArrayList<PokemonModel> getPokemonList() {
 		return pokedex;
 	}
@@ -25,39 +28,40 @@ public class PokedexModel {
 
 	public PokedexModel() {
 		JSONObject jsonObject = new JSONObject(accederFicheroJson());
+		puntero = 0;
 		pokedex = new ArrayList<>();
 		for (int i = 1; i <= jsonObject.length(); i++) {
-			String nombrePokemon = jsonObject.getJSONObject(i+"").getString("Nombre");		
-			JSONArray tiposPokemon = jsonObject.getJSONObject(i+"").getJSONArray("Tipos");		
-			JSONArray evolucionPokemon = jsonObject.getJSONObject(i+"").getJSONArray("Evolucion");	
-			int fasePokemon = jsonObject.getJSONObject(i+"").getInt("Fase");		
-			ArrayList<Integer> listaEvolucion = toArrayList(evolucionPokemon); 
+			String nombrePokemon = jsonObject.getJSONObject(i + "").getString("Nombre").toUpperCase();
+			JSONArray tiposPokemon = jsonObject.getJSONObject(i + "").getJSONArray("Tipos");
+			JSONArray evolucionPokemon = jsonObject.getJSONObject(i + "").getJSONArray("Evolucion");
+			int fasePokemon = jsonObject.getJSONObject(i + "").getInt("Fase");
+			ArrayList<Integer> listaEvolucion = toArrayList(evolucionPokemon);
 			ArrayList<Integer> listaTipos = toArrayList(tiposPokemon);
-			
+
 			pokedex.add(new PokemonModel(i, fasePokemon, nombrePokemon, listaTipos, listaEvolucion));
+
 		}
-	
+
 	}
 
 	private ArrayList<Integer> toArrayList(JSONArray evolucionPokemon) {
-		ArrayList<Integer> listdata = new ArrayList<Integer>();     
-		JSONArray jArray = evolucionPokemon; 
-		if (jArray != null) { 
-		   for (int u=0;u<jArray.length();u++){ 
-		    listdata.add(Integer.parseInt(jArray.get(u).toString()));
-		   } 
+		ArrayList<Integer> listdata = new ArrayList<Integer>();
+		JSONArray jArray = evolucionPokemon;
+		if (jArray != null) {
+			for (int u = 0; u < jArray.length(); u++) {
+				listdata.add(Integer.parseInt(jArray.get(u).toString()));
+			}
 		}
 		return listdata;
 	}
 
 	private String accederFicheroJson() {
 		String line = "";
-		try (
-		    InputStream fis = new FileInputStream("F:\\clase\\git\\PokePoly\\src\\com\\pokepoly\\resources\\json\\pokedex.min.json.txt");
-		    InputStreamReader isr = new InputStreamReader(fis,Charset.forName("UTF-8"));
-		    BufferedReader br = new BufferedReader(isr);
-		) {
-		    line=br.readLine();
+		try (InputStream fis = new FileInputStream(
+				"F:\\clase\\git\\PokePoly\\src\\com\\pokepoly\\resources\\json\\pokedex.min.json.txt");
+				InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+				BufferedReader br = new BufferedReader(isr);) {
+			line = br.readLine();
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -68,7 +72,60 @@ public class PokedexModel {
 		}
 		return line;
 	}
-	
-	
-	
+
+	public void siguientePokemon() {
+		if (pokedex.size() - 1 > puntero) {
+			puntero++;
+		} else {
+			puntero = 0;
+		}
+
+	}
+
+	public void anteriorPokemon() {
+		if (0 < puntero) {
+			puntero--;
+		} else {
+			puntero = pokedex.size() - 1;
+		}
+
+	}
+
+	public PokemonModel buscarPokemon(String data) throws Exception {
+		PokemonModel poke = new PokemonModel();
+		data = data.toUpperCase();
+		try {
+			int dato = Integer.parseInt(data);
+
+			if (dato <= pokedex.size()) {
+				poke = pokedex.get(dato - 1);
+			} else {
+				poke = null;
+			}
+		} catch (NumberFormatException e) {
+			for (int i = 0; i < pokedex.size(); i++) {
+				if (data.equals(pokedex.get(i).getNombrePokemon())) {
+					poke = pokedex.get(i);
+				}
+			}
+
+		}
+
+		return poke;
+
+	}
+
+	public ArrayList<PokemonModel> getPokedex() {
+		return pokedex;
+	}
+
+	public int getPuntero() {
+		return puntero;
+	}
+
+	public void setPuntero(int puntero) {
+		this.puntero = puntero;
+	}
+
+
 }
