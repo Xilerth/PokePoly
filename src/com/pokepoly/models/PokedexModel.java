@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import sun.net.idn.Punycode;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+
 
 public class PokedexModel {
 
@@ -35,8 +37,10 @@ public class PokedexModel {
 			JSONArray tiposPokemon = jsonObject.getJSONObject(i + "").getJSONArray("Tipos");
 			JSONArray evolucionPokemon = jsonObject.getJSONObject(i + "").getJSONArray("Evolucion");
 			int fasePokemon = jsonObject.getJSONObject(i + "").getInt("Fase");
-			ArrayList<Integer> listaEvolucion = toArrayList(evolucionPokemon);
-			ArrayList<Integer> listaTipos = toArrayList(tiposPokemon);
+			
+			
+			ArrayList<IntegerProperty> listaEvolucion = toArrayList(evolucionPokemon);
+			ArrayList<IntegerProperty> listaTipos = toArrayList(tiposPokemon);
 
 			pokedex.add(new PokemonModel(i, fasePokemon, nombrePokemon, listaTipos, listaEvolucion));
 
@@ -44,12 +48,12 @@ public class PokedexModel {
 
 	}
 
-	private ArrayList<Integer> toArrayList(JSONArray evolucionPokemon) {
-		ArrayList<Integer> listdata = new ArrayList<Integer>();
+	private ArrayList<IntegerProperty> toArrayList(JSONArray evolucionPokemon) {
+		ArrayList<IntegerProperty> listdata = new ArrayList<IntegerProperty>();
 		JSONArray jArray = evolucionPokemon;
 		if (jArray != null) {
 			for (int u = 0; u < jArray.length(); u++) {
-				listdata.add(Integer.parseInt(jArray.get(u).toString()));
+				listdata.add(new SimpleIntegerProperty(this,"poke",Integer.parseInt(jArray.get(u).toString())));
 			}
 		}
 		return listdata;
@@ -74,7 +78,7 @@ public class PokedexModel {
 	}
 
 	public void siguientePokemon() {
-		if (pokedex.size() - 1 > puntero) {
+		if (pokedex.size()-1 > puntero) {
 			puntero++;
 		} else {
 			puntero = 0;

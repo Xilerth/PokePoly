@@ -1,9 +1,13 @@
 package com.pokepoly;
 
+import com.pokepoly.componets.PokedexDataComponent;
 import com.pokepoly.componets.PokedexElementComponent;
+import com.pokepoly.controllers.PokedexController;
+import com.pokepoly.controllers.PokedexListController;
 import com.pokepoly.models.PokedexModel;
 import com.pokepoly.models.PokemonModel;
 import com.pokepoly.views.JugadorView;
+import com.pokepoly.views.PokedexView;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -22,29 +26,14 @@ public class PokePolyApp extends Application {
 		pokedexController = new PokedexModel();
 		
 		JugadorView jView = new JugadorView();
-		PokedexElementComponent element = new  PokedexElementComponent("1", "BULBASAUR");
+		PokedexController element = new  PokedexController();
 	
-		VBox vbox = new VBox();
-		int puntero= pokedexController.getPuntero();
-		for (int j = 0; j < 7; j++) {
-			pokedexController.anteriorPokemon();
-		}
-		for (int i = 0; i < 20; i++) {
 		
-			
-				pokedexController.siguientePokemon();
-				vbox.getChildren().addAll(new PokedexElementComponent(
-						Integer.toString(pokedexController.getPokemonList().get(pokedexController.getPuntero()).getIdPokemon()),
-						pokedexController.getPokemonList().get(pokedexController.getPuntero()).getNombrePokemon()));
-			
-	
-		}
 		for (int i = 0; i < pokedexController.getPokemonList().size(); i++) {
 
-			System.out.println(pokedexController.getPokemonList().get(i).toString());
-
+//			System.out.println(pokedexController.getPokemonList().get(i).toString());
 		}
-		primaryStage.setScene(new Scene(vbox, 620, 620));
+		primaryStage.setScene(new Scene(element.getView(), 620, 620));
 		primaryStage.setTitle("PokéPoly");
 		primaryStage.show();
 	}

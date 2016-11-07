@@ -17,23 +17,32 @@ public class PokemonModel {
 
 	IntegerProperty idPokemon, fasePokemon,vidaPokemon,nivelPokemon;
 	StringProperty nombrePokemon;
-	ListProperty<Integer> tiposPokemon, evolucionPokemon;
+	ListProperty<IntegerProperty> tiposPokemon, evolucionPokemon;
 	
 
-	public PokemonModel(int idPokemon, int fasePokemon, String nombrePokemon, ArrayList<Integer> tiposPokemon,
-			ArrayList<Integer> evolucionPokemon) {
+	public PokemonModel(int idPokemon, int fasePokemon, String nombrePokemon, ArrayList<IntegerProperty> tiposPokemon,
+			ArrayList<IntegerProperty> evolucionPokemon) {
 		this.idPokemon = new SimpleIntegerProperty(this, "idPokemon", idPokemon);
 		this.fasePokemon = new SimpleIntegerProperty(this, "fasePokemon", fasePokemon);
 		this.nombrePokemon = new SimpleStringProperty(this, "nombrePokemon", nombrePokemon);
 		this.vidaPokemon= new SimpleIntegerProperty(this, "vidaPokemon",0 );
 		this.nivelPokemon = new SimpleIntegerProperty(this, "nivelPokemon", 1);
-		this.tiposPokemon = new SimpleListProperty<Integer>();
+		this.tiposPokemon = new SimpleListProperty<>();
 		this.tiposPokemon.set(FXCollections.observableArrayList(tiposPokemon));
-		this.evolucionPokemon = new SimpleListProperty<Integer>();
+		this.evolucionPokemon = new SimpleListProperty<>();
 		this.evolucionPokemon.set(FXCollections.observableArrayList(evolucionPokemon));
 	}
 
 	public PokemonModel() {
+		this.idPokemon = new SimpleIntegerProperty(this, "idPokemon" );
+		this.fasePokemon = new SimpleIntegerProperty(this, "fasePokemon");
+		this.nombrePokemon = new SimpleStringProperty(this, "nombrePokemon");
+		this.vidaPokemon= new SimpleIntegerProperty(this, "vidaPokemon",0 );
+		this.nivelPokemon = new SimpleIntegerProperty(this, "nivelPokemon", 1);
+		this.tiposPokemon = new SimpleListProperty<>();
+		this.tiposPokemon.set(FXCollections.observableArrayList(tiposPokemon));
+		this.evolucionPokemon = new SimpleListProperty<>();
+		this.evolucionPokemon.set(FXCollections.observableArrayList(evolucionPokemon));
 	}
 
 	public IntegerProperty idPokemonProperty() {
@@ -72,27 +81,27 @@ public class PokemonModel {
 		this.nombrePokemonProperty().set(nombrePokemon);
 	}
 
-	public ListProperty<Integer> tiposPokemonProperty() {
+	public ListProperty<IntegerProperty> tiposPokemonProperty() {
 		return this.tiposPokemon;
 	}
 
-	public List<Integer> getTiposPokemon() {
+	public List<IntegerProperty> getTiposPokemon() {
 		return this.tiposPokemonProperty().get();
 	}
 
-	public void setTiposPokemon(final ListProperty<Integer> tiposPokemon) {
+	public void setTiposPokemon(final ListProperty<IntegerProperty> tiposPokemon) {
 		this.tiposPokemonProperty().set(tiposPokemon);
 	}
 
-	public ListProperty<Integer> evolucionPokemonProperty() {
+	public ListProperty<IntegerProperty> evolucionPokemonProperty() {
 		return this.evolucionPokemon;
 	}
 
-	public List<Integer> getEvolucionPokemon() {
+	public List<IntegerProperty> getEvolucionPokemon() {
 		return this.evolucionPokemonProperty().get();
 	}
 
-	public void setEvolucionPokemon(final ListProperty<Integer> evolucionPokemon) {
+	public void setEvolucionPokemon(final ListProperty<IntegerProperty> evolucionPokemon) {
 		this.evolucionPokemonProperty().set(evolucionPokemon);
 	}
 

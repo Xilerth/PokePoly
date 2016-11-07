@@ -37,5 +37,11 @@ public class PokedexElementComponent extends GridPane {
 		setPadding(new Insets(10));
 		getColumnConstraints().addAll(col1,col2);
 	}
+	public Label getNumeroLabel() {
+		return numeroLabel;
+	}
+	public Label getNombreLabel() {
+		return nombreLabel;
+	}
 	
 }
