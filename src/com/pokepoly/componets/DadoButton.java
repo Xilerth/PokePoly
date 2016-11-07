@@ -7,7 +7,10 @@ public class DadoButton extends Button {
 
 	public DadoButton() {
 		super();
-		setGraphic(new ImageView(getClass().getResource("../resources/img/dados.png").toExternalForm()));
+		ImageView dados = new ImageView(getClass().getResource("../resources/img/dados.png").toExternalForm());
+		dados.setFitHeight(80);
+		dados.setFitWidth(80);
+		setGraphic(dados);
 		setMaxWidth(Double.MAX_VALUE);
 		setMaxHeight(Double.MAX_VALUE);
 	}

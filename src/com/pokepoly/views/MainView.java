@@ -12,6 +12,7 @@ public class MainView extends Application {
 		
 		primaryStage.setTitle("Jugador 1");
 		primaryStage.setScene(new Scene(v));
+		primaryStage.setResizable(true);
 		primaryStage.show();
 
 	}

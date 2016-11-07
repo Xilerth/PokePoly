@@ -7,8 +7,6 @@ public class DadosModel {
 	private ArrayList<Integer> dados;
 	private int caras;
 
-
-
 	public void lanzarDados(int numDados) {
 		dados.clear();
 		for (int i = 0; i < numDados; i++) {
@@ -26,11 +24,10 @@ public class DadosModel {
 		return tirada;
 	}
 
-	
 	public ArrayList<Integer> getDados() {
 		return dados;
 	}
-	
+
 	public int getCaras() {
 		return caras;
 	}
