@@ -1,0 +1,405 @@
+[
+  {
+    "Pregunta": "¿Como se llama la evolucion de pikachu?",
+    "Respuestas": ["Raichu","Pichu","No tiene", "Zamzu", "Nobachu", "Pikachute"]
+  },
+  {
+    "Pregunta":"¿Cómo se llama la evolución de Dratini?" ,
+    "Respuestas": ["Dragonair","Dragonite","No tiene","Zubat","Vileplume"]
+  },
+  {
+    "Pregunta":"¿Cuántas evoluciones tiene Eevee?",
+    "Respuestas":["3","2","18","No evoluciona","1"]
+  },
+  {
+    "Pregunta":"¿Cuáles son los pajaros legendarios?",
+    "Respuestas":["Zapdos, Moltres y Articuno","Zapdos y Moltres","Solo Articuno","Dragonite y Zapdos","Moltres,Mewtwo y Articuno"]
+  },
+  {
+    "Pregunta":"¿De que tipo es el primer gimnasio al que te enfrentas?",
+    "Respuestas":["Roca","Psiquico","Fantasma","Veneno","Electrico"] 
+  },
+  {
+    "Pregunta":"¿Cuál de los tres pokemon iniciales posee dos tipos?",
+    "Respuestas":["Bulbasur","Charmander","Squirtle","Pikachu","Voltorb"] 
+  },
+  {
+     "Pregunta":"¿Cómo se llama al equipo que lidera Giovanni?",
+    "Respuestas":["Team Rocket","Team Aqua","Team Magma","Team Zafiro","Team Rubi"] 
+  },
+  {
+    "Pregunta":"¿En que ciudad existe un cementerio pokemon de la región de Kanto?",
+    "Respuestas":["Pueblo Lavanda","Azulona","Isla Canela","Meseta Añil","Ciudad Celeste"] 
+  },
+    {
+    "Pregunta":"¿Qué pokemon obtienes al revivir al fósil DOMO?",
+    "Respuestas":["Kabuto","Aerodactyl","No se pueden revivir","Omanyte","Omastar"] 
+  },
+   {
+    "Pregunta":"¿Qué pokemon obtienes al revivir al fósil HELIX?",
+    "Respuestas":["Omanyte","Aerodactyl","No se pueden revivir","Kabutops","Omastar"] 
+  },
+   {
+    "Pregunta":"¿Qué pokemon obtienes al revivir al fósil AMBAR?",
+    "Respuestas":["Aerodactyl","Charizard","No se pueden revivir","Omanyte","Omastar"] 
+  },
+    {
+    "Pregunta":"¿Hay 9 medallas oficiales de la Liga Pokemon?",
+    "Respuestas":["No","Si","No, solo hay 4","No, solo hay 1","No hay medallas"] 
+  },
+  {
+    "Pregunta":"¿El MT28 contiene TumbaPiedra?",
+    "Respuestas":["No","Si","No, es Surf","No, es Fuerza","No, es vuelo"] 
+  },
+  {
+    "Pregunta":"¿Son distintos los Pokémon del mismo tipo y del mismo nivel? ",
+    "Respuestas":["Si","No, solo los del mismo tipo","No, solo los del mismo nivel","Depende del tipo","Depende del nivel"] 
+  },
+  {
+    "Pregunta":"¿Cómo se llama el alto mando que conoce al profesor Oak?",
+    "Respuestas":["Agatha","Lance","Lorelei","GabriMagic","Xilerth"] 
+  },
+  {
+    "Pregunta":"¿Cómo se llama llama el niet@ del profesor Oak?",
+    "Respuestas":["Gary","Ash","Aura","Brock","Misty","Blaine"] 
+  },
+  {
+    "Pregunta":"¿Cómo se llama el último miembro del alto Mando de la liga Pokemon?",
+    "Respuestas":["Lance","Bruno","Mars","Lorelei","Agatha"] 
+  },
+  {
+    "Pregunta":"¿De que tipo son los pokemon que usa principalmente el alto mando Lance?",  
+    "Respuestas":["Dragon","Fantasma","Electrico","Magnetico","Lucha"] 
+  },
+  {
+     "Pregunta":"¿De que tipo es el segundo gimnasio al que te enfrentas?",
+    "Respuestas":["Agua","Psiquico","Fantasma","Veneno","Electrico"] 
+  },
+  {
+    "Pregunta":"¿Donde se consigue a Articuno?",
+    "Respuestas":["Islas espuma","Isla espejismo","Meseta añil","MT Moon","Cueva Diglet"] 
+  },
+  {
+    "Pregunta":"¿Dónde se consigue a Zapdos?",
+    "Respuestas":["En una central electrica","Aparece volando tras vencer Brock","Te lo regalan en Endesa","No aparece"] 
+  },
+  {
+    "Pregunta":"¿Dónde se consigue a Mewtwo?",
+    "Respuestas":["Cueva Celeste","Cueva MT Moon","Monte Diglet","Calle Victoria"] 
+  },
+  {
+    "Pregunta":"¿A quién lloraba el Cubone de Pueblo Lavanda?",
+    "Respuestas":["A su madre","Al Richard","No llora","Al primo","a Ash"] 
+  },{
+    "Pregunta":"¿Cual de de los siguientes pokemon se parece a una pokeball?",
+    "Respuestas":["Voltorb","Magnemite","Snorlax","Ponyta","Raichu"] 
+  },
+  {
+    "Pregunta":"¿Con que objeto podemos despertar a Snorlax?",
+    "Respuestas":["Pokeflauta","Antídoto","Hiperpoción","Despertador","Revivir"] 
+  },
+  {
+    "Pregunta":"La evolución de Hunter se llama...",
+    "Respuestas":["Gengar","Gastly","Zubat","Hunteriomon","Golbat"] 
+  },
+  {
+    "Pregunta":"La evolución de Dragonite se llama",
+    "Respuestas":["No tiene","Dratini","Dragonair","Dragoflash","dratinair"] 
+  },
+  {
+    "Pregunta":"¿En qué ciudad podemos encontrar la Zona Safari?",
+    "Respuestas":["Ciudad Fucsia","Ciudad Azulona","Pueblo Paleta","Ciudad Celeste","Ciudad Malvarosa"] 
+  },
+  {
+    "Pregunta":"Nidoran tiene distintas evoluciones según su género",
+    "Respuestas":["Si","No","No se","Seguro que no","¿genero?"] 
+  },
+  {
+    "Pregunta":"¿Con que tipo de piedra podremos evolucionar a Clefairy a Cleafeable?",
+    "Respuestas":["Piedra Lunar","Piedra Trueno","Piedrazo","Piedra Agua","Piedra Fuego"] 
+  },
+   {
+    "Pregunta":"¿Con qué piedra evolucionamos a Eevee a Jolteon?",
+    "Respuestas":["Piedra Trueno","Piedra Agua","Piedra Lunar","Piedra Fuego","Piedrazo"] 
+  },
+   {
+    "Pregunta":"¿Con qué piedra evolucionamos a Eevee a Flareon?",
+    "Respuestas":["Piedra Fuego","Piedra Agua","Piedra Lunar","Piedra Trueno","Piedrazo"] 
+  },
+   {
+    "Pregunta":"¿Con qué piedra evolucionamos a Eevee a Vaporeon?",
+    "Respuestas":["Piedra Agua","Piedra Trueno","Piedra Lunar","Piedra Fuego","Piedrazo"] 
+  },
+   {
+    "Pregunta":"¿Qué MO conseguimos en la zona Safari?",
+    "Respuestas":["Surf","Fuerza","Vuelo","Corte","Excavar"] 
+  },
+   {
+    "Pregunta":"¿A que nivel evoluciona Charmeleon a Charizard?",
+    "Respuestas":["36","16","26","46","No Evoluciona"] 
+  },
+   {
+    "Pregunta":"¿A que nivel evoluciona Wartortle a Blastoise?",
+    "Respuestas":["36","16","26","46","No Evoluciona"] 
+  },
+    {
+    "Pregunta":"¿A que nivel evoluciona Ivysaur a Venasaur?",
+    "Respuestas":["36","16","26","46","No Evoluciona"] 
+  },
+   {
+    "Pregunta":"¿En que ciudad encontramos las máquinas tragaperras?",
+    "Respuestas":["Azulona","Azafrán","Isla Canela","Pueblo Lavanda","Cueva Digglet"] 
+  },
+   {
+    "Pregunta":"¿En qué edición de Pokemón vemos a Picachu fuera de su pokeball?",
+    "Respuestas":["Amarillo","Azul","Roja","Plata","Oro"] 
+  }, {
+    "Pregunta":"Machoke evoluciona a Machamp...",
+    "Respuestas":["Por intercambio","Al nivel 50","Al nivel 60","Al nivel 70","No evoluciona"] 
+  },
+  {
+    "Pregunta":"Magikarp aprende...",
+    "Respuestas":["Ninguna de las anteriores","MT01","MT13","MT34","MT22"] 
+  },
+   {
+    "Pregunta":"Magikarp evoluciona a Gyarados a nivel...",
+    "Respuestas":["20","30","50","60","70"] 
+  },
+   {
+    "Pregunta":"¿Cuántas colas tienes Vulpix?",
+    "Respuestas":["6","3","4","5","6"] 
+  },
+   {
+    "Pregunta":"¿Cuantas colas tiene Ninetales?",
+    "Respuestas":["9","10","8","7","6"] 
+  },
+   {
+    "Pregunta":"¿Qué pokemón duerme a Pokemon y personas?",
+    "Respuestas":["jigglypuff","Snorlax","Voltorb","Electrode","Electabuzz"] 
+  },
+   {
+    "Pregunta":"¿Cuántas cuchillas tiene Scyther?",
+    "Respuestas":["2","1","3","4","7"] 
+  },
+   {
+    "Pregunta":"¿Cuantas evoluciones tiene Caterpie?",
+    "Respuestas":["2","3","4","1","5"] 
+  },
+  {
+    "Pregunta":"¿De qué tipo es el Pokemon Mr. mime?",
+    "Respuestas":["Psiquico","Fantsma","Payaso","Electrico","Roca"] 
+  },
+  {
+    "Pregunta":"¿Cuántos cañones tiene Blastoise?",
+    "Respuestas":["2","3","4","1","5"] 
+  },
+  {
+    "Pregunta":"¿Cuántas evoluciones tiene Weedle?",
+    "Respuestas":["2","3","4","5","6"] 
+  },
+  {
+    "Pregunta":"¿Cuántos huevos tiene Exeggcute?",
+    "Respuestas":["6","7","5","4","No tiene huevos"] 
+  },
+  {
+    "Pregunta":"¿Cuál de estos pokemon tiene fama de besucona?",
+    "Respuestas":["Jynx","Nidorina","Chansey","Ekans","Nidoqueen"] 
+  },
+  {
+    "Pregunta":"¿Dónde fue creado de forma artificial el pokemón porygon?",
+    "Respuestas":["Laboratorio de Isla Canela","Laboratorio del profesor Oak","Ciudad Azulona","Ciudad Fucsia","Ciudad Azafrán"] 
+  },
+  {
+    "Pregunta":"¿Qué pokemón se considera el ancestro de los pokemons?",
+    "Respuestas":["Mew","Mewtwo","Dragonite","Zapdos","Articuno"] 
+  },
+  {
+    "Pregunta":"¿Cuál de estos pokemón posee una bolsa (marsupio) para cuidar a sus crías?",
+    "Respuestas":["Kangaskhan","Caterpie","Nidoqeen","Arcanine","Squirtle"] 
+  },
+  {
+    "Pregunta":"¿Cuántas evoluciones tiene Oddish?",
+    "Respuestas":["2","3","4","6","1"] 
+  },{
+    "Pregunta":"¿A quién evoluciona Farfetch'd?",
+    "Respuestas":["No evoluciona","Farfetcho","Farfetch'e","Arcanine","Pidgeot"] 
+  },
+  {
+    "Pregunta":"¿Cuál de estos pokemón posee el ataque dia de pago",
+    "Respuestas":["Meowth","Raichu","Scyther","Jynx","Chansey"] 
+  },
+   {
+    "Pregunta":"¿A quién evoluciona Aerodactyl?",
+    "Respuestas":["No evoluciona","Dragonite","Onix","Kabutops","Omastar"] 
+  },
+  {
+    "Pregunta":"¿Cuántas evoluciones tiene Kabuto?",
+    "Respuestas":["1","2","3","4","5"] 
+  },
+  {
+    "Pregunta":"¿Cuántas evoluciones tiene Kabutops?",
+    "Respuestas":["Ninguna","2","3","4","5"] 
+  },
+  {
+    "Pregunta":"Hitmonlee, se caracteriza por...",
+    "Respuestas":["Dar patadas","Regalar helados","Dar puñetazos","Dormir","Bailar"] 
+  },
+  {
+    "Pregunta":"Hitmonchan, se caracteriza por...",
+    "Respuestas":["Dar puñetazos","Dar patadas","Regalar helados","Dormir","Bailar"] 
+  },
+  {
+    "Pregunta":"¿Qué pokemón tiene la forma de un gelatina rosa?",
+    "Respuestas":["Ditto","Dragonite","Onix","Kabutops","Omastar"] 
+  },
+  {
+    "Pregunta":"¿Cuántos brazos tiene Machamp?",
+    "Respuestas":["4","2","3","4","5"] 
+  },
+  {
+    "Pregunta":"¿Cuál es la forma del dibujo que posee Poliwag en su cuerpo?",
+    "Respuestas":["Espiral","Cuadrado","Triángulo","Rectangulo","Circulo"] 
+  },
+  {
+    "Pregunta":"¿Cuántas evoluciones tiene Poliwag?",
+    "Respuestas":["2","1","6","5","8"] 
+  },
+  {
+    "Pregunta":"¿Tiene Lapras un caparazón?",
+    "Respuestas":["Sí","No","Tiene marsupio","Tiene alas","Repta"] 
+  },
+  {
+    "Pregunta":"¿Cuantas cabezas tiene Doduo?",
+    "Respuestas":["2","3","4","5","6"] 
+  },
+  {
+    "Pregunta":"¿Cuantas cabezas tiene Dodrio?",
+    "Respuestas":["3","2","4","5","6"] 
+  },
+  {
+    "Pregunta":"¿Cuantas evoluciones tiene Koffing?",
+    "Respuestas":["1","2","4","5","6"] 
+  },
+  {
+    "Pregunta":"¿De que color tiene los mofletes Raichu?",
+    "Respuestas":["Amarillo","Rojo","Azul","Rosa","Negros"] 
+  },
+  {
+    "Pregunta":"¿De qué color tiene los mofletes Pikachu?",
+    "Respuestas":["Rojo","Amarillo","Azul","Rosa","Negros"] 
+  },
+ {
+    "Pregunta":"¿Cuantas evoluciones tiene Tangela?",
+    "Respuestas":["No tiene","2","4","5","6"] 
+  },
+  {
+    "Pregunta":"El lider del gimnasio de Isla Canela se llama...",
+    "Respuestas":["Blaine","Giovanni","Gary","Misty","Brock"] 
+  },
+  {
+    "Pregunta":"Lt. Sruge es el lider del gimnasio de ciudad...",
+    "Respuestas":["Carmin","Celeste","Azulona","Azafrán","Plateada"] 
+  },
+  {
+    "Pregunta":"¿Qué medalla nos da Erika tras vencerla?",
+    "Respuestas":["Arcoiris","Roca","Cascada","Alma","Pantano"] 
+  },
+  {
+    "Pregunta":"La medalla tierra la conseguimos en...",
+    "Respuestas":["Ciudad Verde","Ciudad Plateada","Ciudad Fucsia","Ciudad Azulona","Ciudad Azulona"] 
+  },
+  {
+    "Pregunta":"La medalla cascada nos la da...",
+    "Respuestas":["Misty","Brock","Blaine","Koga","Lance"] 
+  },
+   {
+    "Pregunta":"¿Cuantas evoluciones tiene Tentacool?",
+    "Respuestas":["1","3","4","1","5"] 
+  },
+  {
+    "Pregunta":"La medalla Roca nos la da...",
+    "Respuestas":["Brock","Misty","Blaine","Koga","Lance"] 
+  },
+  {
+    "Pregunta":"La medalla alma nos la da...",
+    "Respuestas":["Koga","Brock","Blaine","Misty","Sabrina"] 
+  },
+  {
+    "Pregunta":"La medalla pantano nos la da...",
+    "Respuestas":["Sabrina","Brock","Blaine","Koga","Lance"] 
+  },
+  {
+    "Pregunta":"La medalla Trueno nos la da...",
+    "Respuestas":["Lt Surge","Brock","Blaine","Koga","Lance"] 
+  },
+    {
+    "Pregunta":"Sabrina es el lider del gimnasio de ciudad...",
+    "Respuestas":["Azafrán","Celeste","Azulona","Fucsia","Plateada"] 
+  },
+    {
+    "Pregunta":"Koga es el lider del gimnasio de ciudad...",
+    "Respuestas":["Fucsia","Celeste","Azulona","Azafrán","Plateada"] 
+  },
+    {
+    "Pregunta":"Erika es el lider del gimnasio de ciudad...",
+    "Respuestas":["Azulona","Celeste","Carmín","Azafrán","Plateada"] 
+  },
+    {
+    "Pregunta":"Blaine es el lider del gimnasio de...",
+    "Respuestas":["Isla Canela","Celeste","Azulona","Azafrán","Plateada"] 
+  },
+    {
+    "Pregunta":"Brock es el lider del gimnasio de ciudad...",
+    "Respuestas":["Plateada","Celeste","Azulona","Azafrán","Fucsia"] 
+  },
+    {
+    "Pregunta":"¿Cuál de los siguiente tipos no es un tipo pokemón?",
+    "Respuestas":["Magnetico","Hielo","Electrico","Veneno","Normal"] 
+  },
+    {
+    "Pregunta":"Lt. Sruge es el lider del gimnasio de ciudad...",
+    "Respuestas":["Carmin","Celeste","Azulona","Azafrán","Plateada"] 
+  },
+    {
+    "Pregunta":"¿Pueden existir pokemon con dos tipos distintos?",
+    "Respuestas":["Si","No","No, es totalmente incompatible","No se","Si, si es pikachu"] 
+  },
+   {
+    "Pregunta":"¿Cuantas evoluciones tiene Lapras?",
+    "Respuestas":["No tiene","2","4","5","6"] 
+  },
+   {
+    "Pregunta":"¿Cuantas evoluciones tiene Lickitung?",
+    "Respuestas":["No tiene","2","4","5","6"] 
+  },
+   {
+    "Pregunta":"¿De que tipo es Porygon?",
+    "Respuestas":["Normal","Veneno","Fantasma","Psiquico","Electrico"] 
+  },
+   {
+    "Pregunta":"¿De que tipo es Tauros?",
+    "Respuestas":["Normal","Veneno","Fantasma","Psiquico","Electrico"] 
+  },
+   {
+    "Pregunta":"¿De que tipo es Scyther?",
+    "Respuestas":["Bicho","Veneno","Fantasma","Psiquico","Electrico"] 
+  },
+   {
+    "Pregunta":"¿De que tipo es Jynx?",
+    "Respuestas":["Hielo/psiquico","Veneno","Fantasma","Agua","Electrico"] 
+  },
+   {
+    "Pregunta":"¿De que tipo es Lickitung?",
+    "Respuestas":["Normal","Veneno","Fantasma","Psiquico","Electrico"] 
+  },
+   {
+    "Pregunta":"¿De que tipo es Zubat?",
+    "Respuestas":["Veneno/Volador","Planta/Volador","Fantasma","Psiquico","Electrico"] 
+  },
+   {
+    "Pregunta":"¿De que tipo es mew?",
+    "Respuestas":["Psiquico","Veneno","Fantasma","Normal","Electrico"] 
+  }
+  
+  
+]
