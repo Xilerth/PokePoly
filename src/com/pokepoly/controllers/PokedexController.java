@@ -35,7 +35,7 @@ public class PokedexController {
 		if(n.intValue()==controlerList.getModel().getPokedex().size()){
 			
 		}else{
-		view.getPokedexData().getImagenJugador().setImage(new Image(getClass().getResource("../resources/imgPokemon/"+(n.intValue()+1)+".png").toExternalForm()));
+		view.getPokedexData().getImagenJugador().setImage(new Image(getClass().getResource("/com/pokepoly/resources/imgPokemon/"+(n.intValue()+1)+".png").toExternalForm()));
 		view.getPokedexData().getTipoDataPokemonLabel().textProperty().bind(controlerList.getPokemon().tiposPokemonProperty().get(0).asString());
 		view.getPokedexData().getTipo2DataPokemonLabel().textProperty().bind(controlerList.getPokemon().tiposPokemonProperty().get(1).asString());
 		view.getPokedexData().getIdPokemonLabel().textProperty().bind(controlerList.getPokemon().idPokemonProperty().asString());

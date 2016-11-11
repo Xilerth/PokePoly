@@ -5,28 +5,29 @@ import java.util.concurrent.Semaphore;
 
 import com.pokepoly.componets.DadoButton;
 import com.pokepoly.componets.DadosComponent;
-import com.pokepoly.componets.Turno;
 import com.pokepoly.models.DadosModel;
+import com.pokepoly.models.Turno;
+import com.pokepoly.views.JugadorView;
 
 import javafx.concurrent.Task;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class DadosController {
+public class JugadorController {
 
 	DadosModel dados;
-	DadoButton dadoButton;
+	JugadorView jugadorView;
 	Semaphore mutex;
 	Turno turno;
 	int jugador;
 
-	public DadosController(Semaphore state, Turno turno, int jugador) {
-		dadoButton = new DadoButton();
+	public JugadorController(Semaphore state, Turno turno, int jugador) {
+		jugadorView = new JugadorView();
 		this.mutex = state;
 		this.turno = turno;
 		this.jugador = jugador;
-		dadoButton.setOnAction((e) -> onDadosButtonAction());
+		jugadorView.getDadoButton().setOnAction((e) -> onDadosButtonAction());
 	}
 
 	private void onDadosButtonAction() {
@@ -45,6 +46,7 @@ public class DadosController {
 					stage.get(i).setY(300);
 					stage.get(i).initStyle(StageStyle.UNDECORATED);
 					stage.get(i).show();
+				
 				}
 
 				Task<Void> sleeper = new Task<Void>() {
@@ -55,7 +57,6 @@ public class DadosController {
 							mutex.release();
 							turno.siguienteTurno();
 						} catch (InterruptedException e) {
-						} finally {
 						}
 						return null;
 					}
@@ -83,8 +84,42 @@ public class DadosController {
 		return dados;
 	}
 
-	public DadoButton getDadoButton() {
-		return dadoButton;
+	public void setDados(DadosModel dados) {
+		this.dados = dados;
 	}
+
+	public JugadorView getJugadorView() {
+		return jugadorView;
+	}
+
+	public void setJugadorView(JugadorView jugadorView) {
+		this.jugadorView = jugadorView;
+	}
+
+	public Semaphore getMutex() {
+		return mutex;
+	}
+
+	public void setMutex(Semaphore mutex) {
+		this.mutex = mutex;
+	}
+
+	public Turno getTurno() {
+		return turno;
+	}
+
+	public void setTurno(Turno turno) {
+		this.turno = turno;
+	}
+
+	public int getJugador() {
+		return jugador;
+	}
+
+	public void setJugador(int jugador) {
+		this.jugador = jugador;
+	}
+
+
 
 }

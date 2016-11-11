@@ -1,6 +1,7 @@
 package com.pokepoly.models;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -61,11 +62,12 @@ public class PokedexModel {
 
 	private String accederFicheroJson() {
 		String line = "";
-		try (InputStream fis = new FileInputStream(
-				"F:\\clase\\git\\PokePoly\\src\\com\\pokepoly\\resources\\json\\pokedex.min.json.txt");
-				InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
-				BufferedReader br = new BufferedReader(isr);) {
-			line = br.readLine();
+		
+		try {
+				InputStream fis = PokedexModel.class.getResourceAsStream("/com/pokepoly/resources/json/pokedex.min.json");
+				InputStreamReader isr = new InputStreamReader(fis);
+				BufferedReader br = new BufferedReader(isr);
+				line = br.readLine();
 
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -83,9 +85,7 @@ public class PokedexModel {
 		} else {
 			puntero = 0;
 		}
-
 	}
-
 	public void anteriorPokemon() {
 		if (0 < puntero) {
 			puntero--;

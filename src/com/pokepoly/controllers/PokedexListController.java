@@ -18,6 +18,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
+import javafx.scene.Cursor;
 import javafx.scene.layout.VBox;
 
 public class PokedexListController {
@@ -43,6 +44,10 @@ public class PokedexListController {
 		});
 		viewList.getAnteriorButton().setOnAction(e -> {
 			anteriorPokemon();
+		});
+		
+		viewList.setOnMouseDragReleased(e-> {
+			System.out.println("moviendo");
 		});
 		
 	}
@@ -101,7 +106,25 @@ public class PokedexListController {
 				arrayPokedex.add(new PokedexElementComponent(
 						Integer.toString(model.getPokemonList().get(model.getPuntero()).getIdPokemon()),
 						model.getPokemonList().get(model.getPuntero()).getNombrePokemon()));
-			
+			final int x = i;
+			final int entero = model.getPokemonList().get(model.getPuntero()).getIdPokemon();
+			arrayPokedex.get(i).setOnMouseReleased(e->{
+				buscarPokemon(Integer.toString(entero));
+			});
+			arrayPokedex.get(i).setOnMouseEntered(e->{
+				if(x!=6){
+					arrayPokedex.get(x).setStyle("-fx-background-color:rgba(255,255,255,0.8);-fx-border-color:black;-fx-border-width: 2px;");
+					arrayPokedex.get(x).setCursor(Cursor.HAND);
+				}
+				
+			});
+			arrayPokedex.get(i).setOnMouseExited(e->{
+				if(x!=6){
+					arrayPokedex.get(x).setStyle("-fx-background-color:white;-fx-border-color:black;-fx-border-width: 2px;");
+					arrayPokedex.get(x).setCursor(Cursor.DEFAULT);
+				}
+				
+			});
 	
 		}
 		

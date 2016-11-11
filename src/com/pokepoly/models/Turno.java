@@ -1,4 +1,4 @@
-package com.pokepoly.componets;
+package com.pokepoly.models;
 
 public class Turno {
 	public int n = 0;

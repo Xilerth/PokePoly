@@ -17,7 +17,7 @@ public class PokedexView extends BorderPane {
 		
 		
 		
-		
+		pokedexData.setStyle("-fx-background-color:#86D7FF");
 		setCenter(pokeList);
 		setRight(pokedexData);
 	}

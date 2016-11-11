@@ -1,20 +1,12 @@
 package com.pokepoly;
 
-import com.pokepoly.componets.PokedexDataComponent;
-import com.pokepoly.componets.PokedexElementComponent;
 import com.pokepoly.controllers.PokedexController;
-import com.pokepoly.controllers.PokedexListController;
 import com.pokepoly.models.PokedexModel;
-import com.pokepoly.models.PokemonModel;
-import com.pokepoly.views.JugadorView;
-import com.pokepoly.views.PokedexView;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+
 import javafx.stage.Stage;
+
 
 public class PokePolyApp extends Application {
 
@@ -25,7 +17,7 @@ public class PokePolyApp extends Application {
 
 		pokedexController = new PokedexModel();
 		
-		JugadorView jView = new JugadorView();
+//		JugadorView jView = new JugadorView();
 		PokedexController element = new  PokedexController();
 	
 		
@@ -33,7 +25,8 @@ public class PokePolyApp extends Application {
 
 //			System.out.println(pokedexController.getPokemonList().get(i).toString());
 		}
-		primaryStage.setScene(new Scene(element.getView(), 620, 620));
+//		primaryStage.initStyle(StageStyle.UNDECORATED);
+		primaryStage.setScene(new Scene(element.getView(), 620, 630));
 		primaryStage.setTitle("PokéPoly");
 		primaryStage.show();
 	}

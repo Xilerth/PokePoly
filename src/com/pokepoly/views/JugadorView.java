@@ -24,7 +24,6 @@ public class JugadorView extends HBox {
 		super(5);
 
 		dadoButton = new DadoButton();
-
 		pkmn1 = new Button("pkmn1");
 		pkmn2 = new Button("pkmn2");
 		pkmn3 = new Button("pkmn3");
@@ -73,6 +72,78 @@ public class JugadorView extends HBox {
 		getChildren().addAll(gridPane, imagenJugador, labels, dataLabels, dadoButton);
 
 		setAlignment(Pos.TOP_CENTER);
+	}
+
+	public DadoButton getDadoButton() {
+		return dadoButton;
+	}
+
+	public Button getNextButton() {
+		return nextButton;
+	}
+
+	public Button getPkmn1() {
+		return pkmn1;
+	}
+
+	public Button getPkmn2() {
+		return pkmn2;
+	}
+
+	public Button getPkmn3() {
+		return pkmn3;
+	}
+
+	public Button getPkmn4() {
+		return pkmn4;
+	}
+
+	public Button getPkmn5() {
+		return pkmn5;
+	}
+
+	public Button getPkmn6() {
+		return pkmn6;
+	}
+
+	public ImageView getImagenJugador() {
+		return imagenJugador;
+	}
+
+	public Label getNombreLabel() {
+		return nombreLabel;
+	}
+
+	public Label getDineroLabel() {
+		return dineroLabel;
+	}
+
+	public Label getGimnasiosLabel() {
+		return gimnasiosLabel;
+	}
+
+	public Label getPokedexLabel() {
+		return pokedexLabel;
+	}
+
+	public Label getDineroTextoLabel() {
+		return dineroTextoLabel;
+	}
+
+	public Label getNombreTextoLabel() {
+		return nombreTextoLabel;
+	}
+
+	public Label getPokedexTextoLabel() {
+		return pokedexTextoLabel;
+	}
+
+	public Label getGimnasiosTextoLabel() {
+		return gimnasiosTextoLabel;
+	}
+
+	public GridPane getGridPane() {
+		return gridPane;
 	}
 
 }

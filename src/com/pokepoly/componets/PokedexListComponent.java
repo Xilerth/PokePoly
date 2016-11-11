@@ -14,13 +14,17 @@ public class PokedexListComponent extends VBox{
 	public PokedexListComponent(ArrayList<PokedexElementComponent> PEC) {
 		siguienteButton = new Button("Siguiente");
 		siguienteButton.setMaxWidth(Double.MAX_VALUE);
+		siguienteButton.setStyle("-fx-base:rgba(0,0,0,0.4);-fx-border-color:black;-fx-border-width: 2px;-fx-text-fill:white");
 		anteriorButton = new Button("Anterior");
 		anteriorButton.setMaxWidth(Double.MAX_VALUE);
+		anteriorButton.setStyle("-fx-base:rgba(0,0,0,0.4);-fx-border-color:black;-fx-border-width: 2px;-fx-text-fill:white");
 		actualizarTabla(PEC);
 	}
 	public PokedexListComponent() {
 		siguienteButton = new Button("Siguiente");
 		siguienteButton.setMaxWidth(Double.MAX_VALUE);
+		siguienteButton.setStyle("-fx-background-color:red;-fx-border-color:black;-fx-border-width: 2px;");
+		
 		anteriorButton = new Button("Anterior");
 		anteriorButton.setMaxWidth(Double.MAX_VALUE);
 	}
@@ -42,6 +46,7 @@ public class PokedexListComponent extends VBox{
 			
 		}
 		getChildren().addAll(siguienteButton);
+	setStyle("-fx-background-color:#86D7FF");
 	}
 
 	public ArrayList<PokedexElementComponent> getPEC() {
