@@ -1,13 +1,19 @@
 package com.pokepoly.controllers;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
-public class TableroController {
+public class TableroController{
 
 	@FXML
 	private BorderPane tableroBorder;
@@ -18,7 +24,7 @@ public class TableroController {
 	public TableroController() {
 
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/pokepoly/views/principalView.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/pokepoly/views/tableroView.fxml"));
 			loader.setController(this);
 			tableroBorder = loader.load();
 		} catch (IOException e) {
@@ -26,6 +32,8 @@ public class TableroController {
 			e.printStackTrace();
 		}
 
+		
+		
 	}
 
 	public BorderPane getTableroBorder() {

@@ -8,9 +8,13 @@ import com.pokepoly.componets.DadosComponent;
 import com.pokepoly.models.DadosModel;
 import com.pokepoly.models.Turno;
 import com.pokepoly.views.JugadorView;
+import com.pokepoly.views.MainView;
 
 import javafx.concurrent.Task;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -21,12 +25,14 @@ public class JugadorController {
 	Semaphore mutex;
 	Turno turno;
 	int jugador;
-
-	public JugadorController(Semaphore state, Turno turno, int jugador) {
+	StackPane mainView;
+	
+	public JugadorController(Semaphore state, Turno turno, int jugador, StackPane mainView) {
 		jugadorView = new JugadorView();
 		this.mutex = state;
 		this.turno = turno;
 		this.jugador = jugador;
+		this.mainView = mainView;
 		jugadorView.getDadoButton().setOnAction((e) -> onDadosButtonAction());
 	}
 
@@ -38,14 +44,19 @@ public class JugadorController {
 				dados.lanzarDados(2);
 
 				ArrayList<Integer> result = dados.getDados();
-				ArrayList<Stage> stage = new ArrayList<>();
+				ArrayList<DadosComponent> dados = new ArrayList<>();
 				for (int i = 0; i < result.size(); i++) {
-					stage.add(new Stage());
-					stage.get(i).setScene(new Scene(new DadosComponent(result.get(i) + ""), 200, 200));
+					 dados.add(new DadosComponent(result.get(i)+""));
+					dados.get(i).setMaxWidth(200);
+					dados.get(i).setMaxHeight(200);
+					
+					mainView.getChildren().add(dados.get(i));
+					StackPane.setMargin(dados.get(i), new Insets(0,0,0,(-700)+((i+1)*450)));
+					/*stage.get(i).setScene(new Scene();
 					stage.get(i).setX(200 * (i + 1));
 					stage.get(i).setY(300);
 					stage.get(i).initStyle(StageStyle.UNDECORATED);
-					stage.get(i).show();
+					stage.get(i).show();*/
 				
 				}
 
@@ -54,6 +65,7 @@ public class JugadorController {
 					protected Void call() throws Exception {
 						try {
 							Thread.sleep(2000);
+							
 							mutex.release();
 							turno.siguienteTurno();
 						} catch (InterruptedException e) {
@@ -63,11 +75,11 @@ public class JugadorController {
 				};
 				sleeper.setOnSucceeded((e) -> {
 					for (int i = 0; i < result.size(); i++) {
-
-						stage.get(i).close();
+						mainView.getChildren().remove(1, 2);
+						/*stage.get(i).close();*/
 
 					}
-					stage.clear();
+					/*stage.clear();*/
 
 				});
 
